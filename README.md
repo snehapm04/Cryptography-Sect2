@@ -1,4 +1,4 @@
-# Cryptography-Sect2
+# Cryptography
 
 ## Section 2: Final Challenge – Implementing SHA-512
 
