@@ -1,5 +1,6 @@
 import "1024bitPacked.zok" as sha512packed; 
-def main( private field a, private field b, private field c, private field d, private field e, private field f, private field g, private field h, field h0, field h1, field h2, field h3)
+def main( private field a, private field b, private field c, private field d, private field e, private field f, private field g, 
+private field h, field h0, field h1, field h2, field h3)
 {
 field[4] ans = sha512packed([a, b, c, d, e, f, g, h]); 
 assert(ans [0] ==h0);
