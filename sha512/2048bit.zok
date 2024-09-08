@@ -1,20 +1,10 @@
 import "./IVconstants512" as IVconstants512;
 import "./shaRoundNoBoolCheck512" as sha512;
 
-// A function that takes 4 bool[512] arrays as inputs
-// and applies 2 rounds of sha512 compression.
-// It returns an array of 512 bool.
 def main(bool[512] a, bool[512] b, bool[512] c, bool[512] d) -> bool[512] {
 
-    // Retrieve the initial vector (IV) from the IVconstants512 module for SHA-512.
     bool[512] IV = IVconstants512();
-    
-    // Apply the first round of SHA-512 compression using inputs a, b, and the IV.
     bool[512] digest1 = sha512(a, b, IV);
-    
-    // Apply the second round of SHA-512 compression using inputs c, d, and the result from the first round.
     bool[512] digest2 = sha512(c, d, digest1);
-    
-    // Return the final 512-bit digest.
     return digest2;
 }
